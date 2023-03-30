@@ -1,0 +1,14 @@
+@media (min-width:768px){
+    .d-md-flex {
+        display:        flex!important
+    }
+}
+.justify-content-around{
+    justify-content:    space-around!important
+}
+.w-100 {
+    width:          100%;
+}
+.m-auto {
+    margin:         auto;
+}
