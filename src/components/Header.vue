@@ -1,5 +1,5 @@
 <template>
-    <header class="w3-row w3-white w3-display-container header">
+    <header class="w3-row w3-white w3-display-container header" id="home">
         <video class="headerVideo" autoplay="true" loop="true" muted="true">
             <source src="../assets/skyscrapers-55933.mp4" type="video/mp4">
         </video>
