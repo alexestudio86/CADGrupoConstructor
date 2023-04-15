@@ -1,13 +1,18 @@
 <template>
     <nav class="w3-row w3-dark-gray w3-card h-20 sticky-md-top w3-padding">
-        <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items- center justify-content-between">
             <router-link class="w3-bar-item w3-button w3-white w3-wide w3-round" to="/">
                 <img class="w3-image animate__animated animate__fadeInDown animate__delay-1s" src="../assets/logo_cad_transparencia.png" alt="Logo CAD Grupo Constructor" width="70" />
             </router-link>
             <div>
+                {{ seePath() }}
+                <router-link :class="classObject()" to="/">
+                    <i class="fas fa-home" style="margin: 0 4px 0 0" />
+                    <span>Home</span>
+                </router-link>
                 <router-link v-for="(link, index) in links" class="w3-bar-item w3-button" exact-active-class="meme" :key="index" :to="link.url">
                     <i :class="link.icon" style="margin: 0 4px 0 0" />
-                    {{ link.name }}
+                    <span>{{ link.name }}</span>
                 </router-link>
             </div>
         </div>
@@ -16,12 +21,15 @@
 
 <script setup>
 
-    const links = [
-        {
-            name:   'Inicio',
-            url:    '/#home',
-            icon:   'fas fa-home'
-        },{
+    const seePath = ( ) => console.log( new URL(location.href) )
+
+    const classObject = () => {
+        return {'text-danger': false}
+    }
+
+
+
+    const links = [{
             name:   'Proyectos',
             url:    '/#projects',
             icon:   'fa fa-th'
