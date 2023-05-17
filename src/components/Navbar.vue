@@ -5,15 +5,14 @@
                 <img class="w3-image animate__animated animate__fadeInDown animate__delay-1s" src="../assets/logo_cad_transparencia.png" alt="Logo CAD Grupo Constructor" width="70" />
             </router-link>
             <div>
-                {{ seePath() }}
-                <router-link :class="classObject()" to="/">
+                <a class="w3-bar-item w3-button" href="#home">
                     <i class="fas fa-home" style="margin: 0 4px 0 0" />
                     <span>Home</span>
-                </router-link>
-                <router-link v-for="(link, index) in links" class="w3-bar-item w3-button" exact-active-class="meme" :key="index" :to="link.url">
+                </a>
+                <a v-for="(link, index) in links" class="w3-bar-item w3-button" :key="index" :href="link.url">
                     <i :class="link.icon" style="margin: 0 4px 0 0" />
                     <span>{{ link.name }}</span>
-                </router-link>
+                </a>
             </div>
         </div>
     </nav>
@@ -21,30 +20,19 @@
 
 <script setup>
 
-    const seePath = ( ) => console.log( new URL(location.href) )
-
-    const classObject = () => {
-        return {'text-danger': false}
-    }
-
-
 
     const links = [{
+            name:   '¿Quienes somos?',
+            url:    '#who-are',
+            icon:   'fas fa-user'
+        },{
             name:   'Proyectos',
-            url:    '/#projects',
+            url:    '#projects',
             icon:   'fa fa-th'
         },{
             name:   'Contacto',
-            url:    'contact',
+            url:    '#contact',
             icon:   'fa fa-envelope'
-        },{
-            name:   'Servicios',
-            url:    'services',
-            icon:   'far fa-address-card'
-        },{
-            name:   '¿Quienes somos?',
-            url:    'who-are',
-            icon:   'fas fa-user'
         }
     ]
 

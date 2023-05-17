@@ -6,7 +6,7 @@
             <img class="w3-image w3-hover-opacity" :src="image.source" :alt="image.title" style="width:100%; height:250px; object-fit:cover; cursor: pointer;" />
         </div>
     </div>
-    <Modal v-if="modalElements.status.value" :images="images" :modalElements="modalElements" />
+    <Modal v-if="modalElements.status" :images="images" :modalElements="modalElements" />
   </div>
 </template>
 
@@ -73,14 +73,14 @@
     ]
 
     // MODAL
-    const modalElements = {
-        status:     ref(false),
-        idx:        ref(null)
-    };
+    const modalElements = ref({
+        status:     false,
+        idx:        null
+    });
 
     const showModal = ( evt ) => {
-        modalElements.status.value  =   ref(true),
-        modalElements.idx.value     =   ref(evt.idx)
+        modalElements.value.status  =   true,
+        modalElements.value.idx     =   evt.idx
     }
 
 

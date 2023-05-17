@@ -1,5 +1,5 @@
 <template>
-  <div class="w3-light-gray">
+  <div class="w3-light-gray" id="contact">
     <h1 class="w3-xlarge w3-center text-uppercase w3-padding-32">Comencemos un proyecto nuevo</h1>
     <div class="w3-row w3-container w3-padding-32">
         <div class="w3-half w3-container">

@@ -1,5 +1,5 @@
 <template>
-    <div class="w3-row">
+    <div class="w3-row" id="who-are">
         <h1 class="w3-xxlarge w3-center text-uppercase w3-padding-64">Acerca de</h1>
         <div class="w3-row w3-padding-large w3-center">
             <div class="w3-quarter" v-for="(feature, index) in features" :key="index">
