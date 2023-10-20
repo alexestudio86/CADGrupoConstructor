@@ -3,6 +3,7 @@
   <Navbar />
   <About />
   <Gallery />
+  <Contact />
   <Footer />
 </template>
 
@@ -12,6 +13,7 @@
   import Navbar from '../components/Navbar.vue';
   import About from '../components/About.vue';
   import Gallery from '../components/Gallery.vue';
-  import Footer from '../components/Footer.vue';
+  import Contact from '../components/Contact.vue';
+  import Footer from '../components/Footer.vue'
 
 </script>
